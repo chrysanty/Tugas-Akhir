@@ -7,7 +7,6 @@
       "tools": [
         "latex_itb_make",
         "latex_itb_del",
-        "latex_itb_move"
       ]
     }
   ],
