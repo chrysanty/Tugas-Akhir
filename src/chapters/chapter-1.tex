@@ -5,32 +5,30 @@
 
 Dalam kehidupan sehari-hari, manusia sering kali menghadapi masalah pengambilan keputusan. Pengambilan keputusan tersebut akan berdampak pada keputusan berikutnya, dan akan terus berlanjut hingga mencapai suatu titik. Dalam ilmu matematika, terdapat teori permainan yang merupakan ilmu yang mempelajari pemodelan matematis untuk masalah dan kerja sama antara agen pengambil keputusan.
 
-Teori permainan memiliki tiga aspek utama, yaitu: aksi, keluaran, dan preferensi. Tiga aspek ini saling mempengaruhi satu sama lain. Aksi akan mengakibatkan keluaran, keluaran akan memunculkan pilihan aksi selanjutnya, dan pilihan aksi diurutkan berdasarkan preferensi. Dalam kehidupan nyata, salah satu contoh teori permainan adalah kesetimbangan Nash (atau lebih dikenal sebagai \textit{Nash equilibrium}) yang menyatakan bahwa strategi optimal bagi seorang pemain adalah mengikuti strategi awal sambil mengetahui strategi lawan, dan mempertahankan strategi yang sama apabila seluruh pemain lain tidak mengubah strategi.
+Teori permainan memiliki tiga aspek utama, yaitu: aksi, keluaran, dan preferensi. Tiga aspek ini saling mempengaruhi satu sama lain. Aksi akan mengakibatkan keluaran, keluaran akan menimbulkan pilihan aksi selanjutnya, dan pilihan aksi diurutkan berdasarkan preferensi. Dalam kehidupan nyata, salah satu contoh teori permainan adalah kesetimbangan Nash yang menyatakan bahwa strategi optimal bagi seorang pemain adalah mengikuti strategi awal sambil mengetahui strategi lawan, dan mempertahankan strategi yang sama apabila seluruh pemain lain tidak mengubah strategi.
 
 Permainan peran atau \textit{role-playing game} (RPG) adalah jenis permainan dimana pemain mengambil sebuah peran pada permainan dengan latar belakang fiksi. Pemain bertanggung jawab untuk memerankan suatu peran dan melakukan aksi. Jenis aksi yang dilakukan dapat bermacam-macam, seperti percakapan antar karakter atau melakukan suatu tindakan atau kegiatan. Aksi yang dilakukan merupakan suatu contoh pengambilan keputusan, dimana keputusan yang diambil akan berdampak pada pengembangan karakter selanjutnya. Pengembangan karakter dapat mempengaruhi akhir dari permainan.
 
+Persona 4 Golden (selanjutnya akan disebut juga sebagai P4G) adalah permainan peran dari yang dibuat oleh perusahaan video gim Jepang, Atlus. Permainan P4G pertama kali rilis di PlayStation Vita pada tahun 2012 dan Windows pada tahun 2020. Permainan P4G memiliki latar waktu pada tahun 2011, dimana karakter utama (atau dikenal sebagai Narukami Yuu) harus menyelesaikan misteri kasus pembunuhan berantai yang terjadi di kota Inaba.
 
-Persona 4 Golden (selanjutnya akan disebut juga sebagai P4G) adalah permainan peran dari yang dibuat oleh perusahaan video gim Jepang, Atlus. Permainan P4G pertama kali rilis di PlayStation Vita pada tahun 2012 dan Windows pada tahun 2020. Permainan P4G memiliki latar waktu pada tahun 2011, dimana pemain utama (atau dikenal sebagai Narukami Yu) harus menyelesaikan misteri kasus pembunuhan berantai yang terjadi di kota Inaba.
+Dalam permainan P4G, terdapat dua jenis aksi penting. Yang pertama, ketika karakter utama masuk dalam \textit{dungeon}. Di dalam \textit{dungeon}, karakter utama akan menggunakan berbagai Persona untuk bertarung dan menyelamatkan karakter lain yang terjebak dalam \textit{dungeon} tersebut. Persona adalah atribut yang digunakan karakter ketika masuk ke \textit{dungeon}. Persona akan membantu karakter ketika bertarung dalam \textit{dungeon} melawan \textit{shadows}. Apabila karakter lain gagal diselamatkan, permainan berakhir dan permainan dinyatakan berakhir buruk. Aksi yang dilakukan dalam \textit{dungeon} sangat krusial karena akan berdampak pada epilog permainan ini. Yang kedua, ketika karakter utama bersosialisasi dengan karakter lain. Relasi antara karakter utama dengan karakter lain dinyatakan dalam bentuk \textit{social link}. Semakin erat relasi yang dimiliki antar karakter, maka \textit{social link} akan semakin tinggi. Akibatnya, Persona yang dimiliki akan semakin kuat dan harapannya \textit{dungeon} dapat diselesaikan dengan lebih cepat dan mudah.
 
-Dalam permainan P4G, terdapat dua jenis aksi penting. Yang pertama, ketika pemain utama bersosialisasi dengan pemain lain. Dalam permainan ini, digambarkan bahwa setiap pemain memiliki \textbf{Persona}, atau atribut yang digunakan karakter ketika masuk ke \textit{dungeon}. Persona akan membantu karakter ketika bertarung dalam \textit{dungeon} melawan \textit{shadows}. Relasi antara pemain utama dengan karakter lain dinyatakan dalam bentuk \textit{social link}. Semakin erat relasi yang dimiliki antar karakter, maka \textit{social link} akan semakin tinggi. Artinya, Persona yang dimiliki akan semakin kuat dan \textit{dungeon} dapat diselesaikan dengan lebih cepat dan mudah. Yang kedua, ketika pemain utama masuk dalam \textit{dungeon}. Di dalam \textit{dungeon}, pemain utama akan menggunakan berbagai Persona untuk bertarung dan menyelamatkan pemain lain yang terjebak dalam \textit{dungeon} tersebut. Apabila pemain lain gagal diselamatkan, permainan berakhir dan permainan dinyatakan berakhir buruk.
-Aksi yang dilakukan dalam \textit{dungeon} sangat krusial karena akan berdampak pada epilog permainan ini.
-
-Rentang waktu permainan P4G terbatas dari bulan April 2011 hingga Maret 2012. Sehingga, pemain utama harus menstrategikan pemilihan keputusan terbaik yang dilakukan setiap hari dalam permainan. Tujuan utama dari tugas akhir ini adalah memaksimalkan \textit{social link} pemain utama dengan 23 Persona lainnya dalam rentang waktu tersebut. Sehingga, berdasarkan latar belakang yang sudah diuraikan, pada tugas akhir ini akan dimodelkan pemilihan keputusan terbaik untuk memaksimalkan \textit{social link} seluruh Persona. Model ini akan digunakan untuk memaksimalkan potensi penyelesaian permainan secara optimal, atau \textit{completion rate} 100\%.
+Rentang waktu permainan P4G terbatas dari bulan April 2011 hingga Maret 2012. Sehingga, karakter utama harus menstrategikan pemilihan keputusan terbaik yang dilakukan setiap hari dalam permainan. Tujuan utama dari tugas akhir ini adalah memaksimalkan \textit{social link} karakter utama dengan 23 Persona lainnya dalam rentang waktu tersebut. Sehingga, berdasarkan latar belakang yang sudah diuraikan, pada tugas akhir ini akan dimodelkan pemilihan keputusan terbaik untuk memaksimal-kan \textit{social link} seluruh Persona. Model ini akan digunakan untuk memaksimalkan potensi penyelesaian permainan secara optimal, atau \textit{completion rate} 100\%.
 
 \section{Rumusan Masalah}
-Dengan waktu yang terbatas, pemain utama harus memaksimalkan \textit{social link} seluruh Persona. \textit{Social link} mempengaruhi keberhasilan penyelesaian permainan dan kemudahan pemain menyelesaikan permainan ketika berada di \textit{dungeon}.
+Dengan waktu yang terbatas, karakter utama harus memaksimalkan \textit{social link} seluruh Persona. \textit{Social link} mempengaruhi keberhasilan penyelesaian permainan dan kemudahan karakter menyelesaikan permainan ketika berada di \textit{dungeon}.
 
-Penelitian ini menjawab permasalahan pengambilan keputusan, yang secara spesifik dilakukan pada permainan Persona 4 Golden. Sehingga, rumusan masalah dari tugas akhir ini adalah sebagai berikut.
+Penelitian ini menjawab permasalahan pengambilan keputusan, yang secara spesifik dilakukan pada permainan P4G. Sehingga, rumusan masalah dari tugas akhir ini adalah sebagai berikut.
 \begin{enumerate}
-    \item Bagaimana cara mengkonstruksi fungsi \textit{payoff} sehingga pengambilan keputusan dalam permainan Persona 4 Golden optimal?
-    \item Bagaimana algoritma penyelesaian masalah pemilihan keputusan akan diimplementasikan pada permainan Persona 4 Golden?
+    \item Bagaimana cara mengkonstruksi fungsi \textit{payoff} sehingga pengambilan keputusan dalam permainan P4G optimal?
+    \item Bagaimana algoritma penyelesaian masalah pemilihan keputusan akan diimplementasikan pada permainan P4G?
 \end{enumerate}
 
 \section{Tujuan}
 Berdasarkan rumusan masalah yang telah ditulis pada subbab berikutnya, tujuan dari tugas akhir ini adalah sebagai berikut.
 \begin{enumerate}
-    \item Melakukan konstruksi fungsi \textit{payoff} untuk pengoptimalan pengambilan keputusan dalam permainan Persona 4 Golden.
-    \item Mengimplementasikan algoritma masalah pengambilan keputusan pada permainan Persona 4 Golden.
+    \item Melakukan konstruksi fungsi \textit{payoff} untuk pengoptimalan pengambilan keputusan dalam permainan P4G.
+    \item Mengimplementasikan algoritma masalah pengambilan keputusan pada permainan P4G.
 \end{enumerate}
 
 \section{Batasan Masalah}
@@ -43,7 +41,8 @@ Dalam tugas akhir ini, terdapat asumsi yang digunakan. Sehingga, batasan masalah
 Metodologi atau tahapan yang digunakan dalam tugas akhir ini adalah sebagai berikut.
 \begin{enumerate}
     \item Mempelajari teori permainan dan permainan peran berdasarkan buku atau jurnal ilmiah yang relevan.
-    \item Membuat algoritma masalah pengambilan keputusan pada permainan Persona 4 Golden.
-    \item Melakukan implementasi dari algoritma masalah pengambilan keputusan pada permainan Persona 4 Golden.
-    \item Melakukan analisis hasil implementasi algoritma masalah pengambilan keputusan pada permainan Persona 4 Golden.
+    \item Mengumpulkan data terkait masalah pengambilan keputusan yang akan diuji.
+    \item Membuat algoritma masalah pengambilan keputusan permainan P4G.
+    \item Mengimplementasikan algoritma masalah pengambilan keputusan.
+    \item Melakukan analisis dari hasil implementasi algoritma masalah pengambilan keputusan.
 \end{enumerate}
