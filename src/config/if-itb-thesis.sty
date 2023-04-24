@@ -26,6 +26,9 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage{titling}
 \usepackage{blindtext}
 \usepackage{sectsty}
@@ -66,16 +69,16 @@
   \addtocontents{atoc}{\protect\value{tocdepth}=\savedtocdepth}%
 
   \titlecontents{chapter}
-    [0pt]
-    {\bfseries}
-    {Lampiran \thecontentslabel.\quad}
-    {}
-    {\textmd{\dotfill}\contentspage}
+  [0pt]
+  {\bfseries}
+  {Lampiran \thecontentslabel.\quad}
+  {}
+  {\textmd{\dotfill}\contentspage}
 
   \titleformat{\chapter}[block]
-    {\bfseries}
-    {\chaptertitlename\ \thechapter.\quad}{0pt}
-    {\bfseries}
+  {\bfseries}
+  {\chaptertitlename\ \thechapter.\quad}{0pt}
+  {\bfseries}
 }
 
 % Hilangkan titik pada toc
@@ -88,23 +91,23 @@
 
 % Setel title pada chapter-chapter di toc, lof, lot
 \titlecontents{chapter}
-  [0pt]
-  {\bfseries}
-  {\MakeUppercase{Bab} \thecontentslabel\quad\uppercase}
-  {}
-  {\textmd{\dotfill}\contentspage}
+[0pt]
+{\bfseries}
+{\MakeUppercase{Bab} \thecontentslabel\quad\uppercase}
+{}
+{\textmd{\dotfill}\contentspage}
 \titlecontents{figure}
-  [0pt]
-  {}
-  {Gambar \thecontentslabel.\quad}
-  {}
-  {\hfill\contentspage}
+[0pt]
+{}
+{Gambar \thecontentslabel.\quad}
+{}
+{\hfill\contentspage}
 \titlecontents{table}
-  [0pt]
-  {}
-  {Tabel \thecontentslabel.\quad}
-  {}
-  {\hfill\contentspage}
+[0pt]
+{}
+{Tabel \thecontentslabel.\quad}
+{}
+{\hfill\contentspage}
 
 % Masukin Daftar Pustaka ke toc
 \let\originalprintbibliography\printbibliography
@@ -121,9 +124,9 @@
 % Setting judul
 \chapterfont{\centering \Large}
 \titleformat{\chapter}[display]
-  {\Large\centering\bfseries}
-  {\chaptertitlename\ \thechapter}{0pt}
-    {\Large\bfseries\uppercase}
+{\Large\centering\bfseries}
+{\chaptertitlename\ \thechapter}{0pt}
+{\Large\bfseries\uppercase}
 
 % Setting nomor pada subbsubsubbab
 \setcounter{secnumdepth}{3}

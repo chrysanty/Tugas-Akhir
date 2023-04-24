@@ -1,9 +1,26 @@
+\newtheorem{definisi}{Definisi}
+
 \chapter{Teori Permainan}
 \section{Teori Permainan}
+%bahas game theory
+Teori permainan yang merupakan ilmu yang mempelajari pemodelan matematis untuk masalah dan kerja sama antara agen pengambil keputusan. Pengambil keputusan yang selanjutnya disebut sebagai pemain umumnya memiliki informasi yang berguna untuk proses pengambilan keputusan selanjutnya. Pemain harus mengetahui tiga hal yang mendasari masalah ini, seperti: Apa saja pilihan yang mungkin dilakukan? Apa saja hasil dari setiap pilihan? Bagaimana efek dari hasil tersebut (Tadelis, 2011)?
 
+Pengamatan sederhana diatas memberikan definisi pertama yang penting untuk setiap masalah pengambilan keputusan.
+\begin{definisi}
+    \textbf{Masalah pengambilan keputusan} terdiri atas tiga komponen penting:
+    \begin{enumerate}
+        \item \textbf{Aksi}, yaitu seluruh alternatif pilihan yang dapat dilakukan pemain.
+        \item \textbf{Payoff}, yaitu seluruh konsekuensi yang dapat terjadi dari aksi.
+        \item \textbf{Preferensi}, yaitu deskripsi bagaimana pemain mengurutkan himpunan keluaran dari yang paling diinginkan hingga paling tidak diinginkan.
+    \end{enumerate}
+\end{definisi}
 
-
-
+\begin{figure}
+    \centering
+    \input{resources/decision_graphics.tex}
+    \caption{Diagram Alir Masalah Pengambilan Keputusan}
+\end{figure}
+Relasi preferensi dinyatakan dalam notasi $\succsim$, yang menyatakan relasi antar \textit{payoff} yang dapat menunjukkan preferensi pemain. Sebagai contoh, misalkan terdapat seorang pemain yang ingin memilih rasa es krim vanila atau stroberi. Pilihan rasa es krim ini dapat di lambangkan sebagai himpunan aksi yang akan dipilih pemain yaitu  $A = \lbrace v, s\rbrace$, dimana $v$ menyatakan rasa vanila dan $s$ menyatakan rasa stroberi. Aksi yang dipilih pemain dapat berupa kondisi dimana pemain memutuskan untuk memakan es krim rasa vanila atau stroberi. Hal ini dapat ditulis sebagai himpunan bayaran $P = \lbrace V, S\rbrace$.
 % Bab Studi Literatur digunakan untuk mendeskripsikan kajian literatur yang terkait dengan persoalan tugas akhir. Tujuan studi literatur adalah:
 
 % \begin{enumerate}

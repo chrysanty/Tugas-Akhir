@@ -1,5 +1,5 @@
 {
-  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.view.pdf.viewer": "browser",
   "latex-workshop.latex.recipe.default": "lastUsed",
   "latex-workshop.latex.recipes": [
     {
