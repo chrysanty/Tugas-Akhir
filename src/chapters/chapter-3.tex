@@ -1,4 +1,8 @@
-\chapter{\textit{Social Link}}
+\chapter{Simulasi Manajemen Waktu dengan Permainan Persona 4 Golden}
+Sebagai makhluk sosial, manusia bergantung pada interaksi sosial untuk kelangsungan hidup dan perkembangan pribadi. Interaksi sosial membantu manusia dalam membentuk identitas dan karakter. Manusia sering kali menghadapi masalah pengambilan keputusan ketika melakukan interaksi sosial. Pengambilan keputusan tersebut dapat berdampak pada hubungan interpersonal dengan manusia lain dan juga keputusan yang akan datang. Melalui teori permainan yang diaplikasikan dalam permainan Persona 4 Golden, akan diciptakan model pengambilan keputusan sehingga manusia memiliki potensi pilihan terbaik dan dapat mengambil keputusan terbaik pada suatu kondisi.
+
+Melalui permainan Persona 4 Golden, akan dilakukan pemodelan interaksi sosial yang terjadi dalam permainan, sehingga hubungan interpersonal dengan karakter lain dapat terjalin secara maksimal. Pada bagian selanjutnya akan dijelaskan hubungan sosial dalam permainan Persona 4 Golden, faktor-faktor yang mempengaruhi hubungan sosial, dan simulasi pengaturan waktu dalam melakukan interaksi sosial di permainan Persona 4 Golden.
+
 \section{\textit{Social Link}}
 %https://www.polygon.com/guides/21284344/persona-4-golden-social-links-guide
 \textit{Social link} merepresentasikan hubungan sosial antara karakter utama dengan karakter lainnya. Dalam permainan P4G, terdapat 23 \textit{social link} yang perlu ditingkatkan, dengan rincian:
@@ -348,8 +352,90 @@ Pada mode ini, karakter utama harus mencari petunjuk untuk kasus yang ingin dise
     %intinya tim investigasi + Marie
 \end{table}
 
+
 \subsection{Mode Eksplorasi}
 Setelah menginvestigasi kasus dan mendapatkan petunjuk, karakter utama harus menyelesaikan kasus dengan mengeksplorasi \textit{dungeon}. Pada waktu ini, \textit{social link} beberapa karakter (anggota tim kasus) tidak dapat ditingkatkan hingga \textit{dungeon} telah selesai dieksplorasi, atau kasus telah diselesaikan.
 
-%Tujuan utama penulisan bab ini adalah untuk menguraikan rencana penyelesaian masalah tugas akhir yang akan dieksekusi secara utuh pada saat pelaksanaan Tugas Akhir II. Bab ini merupakan bab penutup Laporan Tugas Akhir I yang dapat dipandang sebagai bab yang akan menjembatani perpindahan ke proses pelaksanaan Tugas Akhir II. Pengembangan lebih lanjut dari bab ini dapat menjadi bagian dari bab Deskripsi Solusi pada Laporan Tugas Akhir.
-%\blindtext
+Selain itu perhatikan pula untuk karakter Ryotaro Dojima, apabila karakter utama menyelesaikan \textit{dungeon} lebih awal, Ryotaro Dojima akan memiliki waktu luang lebih pada malam hari sehingga karakter utama memiliki lebih banyak waktu untuk meningkatkan level \textit{social link} dengan Ryotaro Dojima. Namun, perlu diperhatikan bahwa ketika Ryotaro Dojima ada di rumah, level \textit{social link} karakter Nanako Dojima tidak dapat ditingkatkan. \textit{Social link} Nanako Dojima hanya dapat ditingkakan ketika Ryotaro Dojima sedang bertugas atau tidak ada di rumah.
+
+
+\section{Simulasi Permainan Persona 4 Golden}
+Ketika menyimulasikan interaksi sosial yang terjadi dalam permainan Persona 4 Golden, pertama-tama definisikan matriks diagonal A berukuran 19 x 19, yaitu matriks status \textit{social link} awal seluruh karakter dalam permainan Persona 4 Golden dengan $a_{ii}$ merupakan status \textit{social link} suatu karakter, nilai $i = 1,2,...,19, i$ adalah jumlah karakter yang perlu ditingkatkan status \textit{social link}-nya.
+
+\[
+    A =
+    \begin{bmatrix}
+        a_{11} & 0      & \cdots & 0                \\
+        0      & a_{22} & \ddots & \vdots           \\
+        \vdots & \ddots & \ddots & 0                \\
+        0      & \cdots & 0      & a_{19 \space 19}
+    \end{bmatrix}
+\]
+
+Perhatikan bahwa \textit{social link} setiap karakter dapat ditingkatkan sebanyak 10 level, sehingga definisikan $a_{ii}= 10$ sebagai nilai awal setiap $a_{ii}$ pada matriks A.
+
+\[
+    A =
+    \begin{bmatrix}
+        10     & 0      & \cdots & 0      \\
+        0      & 10     & \ddots & \vdots \\
+        \vdots & \ddots & \ddots & 0      \\
+        0      & \cdots & 0      & 10
+    \end{bmatrix}
+\]
+
+Tujuan akhir dari simulasi ini adalah untuk menyelesaikan permainan 100\% dan menyelesaikan akhir cerita dengan sempurna. Untuk mendukung tujuan tersebut, status \textit{social link} seluruh karakter akan ditingkatkan hingga sempurna.
+Oleh karena itu, matriks A diatas akan dijadikan matriks 0 berukuran 19 x 19. Sehingga untuk setiap status \textit{social link} yang naik, nilai $a_{ii}$ akan berkurang seiring berjalannya waktu. Matriks 0 berukuran 19 x 19 menyatakan setiap status \textit{social link} telah ditingkatkan sebanyak 10 level, sehingga dibutuhkan modifikasi pada matriks A, yaitu:
+
+\[
+    A =
+    \begin{bmatrix}
+        10-L_{1} & 0        & \cdots & 0         \\
+        0        & 10-L_{2} & \ddots & \vdots    \\
+        \vdots   & \ddots   & \ddots & 0         \\
+        0        & \cdots   & 0      & 10-L_{19}
+    \end{bmatrix}
+\]
+dengan $L_{i}$ menyatakan perkembangan hubungan sosial antara karakter utama dengan karakter lain (status \textit{social link}). Sehingga semakin tinggi nilai $L_{i}$, semakin cepat tujuan akhir terpenuhi.
+
+Untuk meningkatkan nilai $L_{i}$, yaitu status \textit{social link} dari "1" hingga "10", definisikan himpunan strategi:
+\begin{center}
+    $S_{j}^{T} = [n_1$ $n_2$ $\dots$ $n_{19}]$
+\end{center}
+
+Pada himpunan strategi tersebut, $S_{j}$ menyatakan ketersediaan \textit{social link} karakter untuk ditingkatkan pada hari ke-$j$. Pandang bahwa $n_1$, $n_2$, $\dots$, $n_{19}$ bernilai "1" jika status \textit{social link} suatu karakter dapat ditingkatkan pada hari ke-$j$ dan bernilai "0" jika status \textit{social link} tidak dapat ditingkatkan pada hari tersebut.
+
+Definisikan $L_{i}^{1}$ sebagai iterasi pertama dengan $L_{i}^{1} = 0$, yang menandakan status \textit{social link} setiap karakter di awal permainan adalah "0". Kemudian, konstruksi perkalian matriks sebagai fungsi \textit{payoff} yang menunjukkan seluruh konsekuensi yang dapat terjadi dari aksi yang dilakukan pada hari ke-$j$. Setelah mendapatkan keluaran berupa konsekuensi dari fungsi \textit{payoff}, pilih preferensi atau aksi terbaik berupa status \textit{social link} karakter mana yang perlu ditingkatkan pada hari tersebut.
+
+Fungsi \textit{payoff} dibangun dari perkalian $A_{j}$ dan $S_{j}$ dengan $j = 1,2,\dots,256$, $j$ adalah banyaknya hari untuk meningkatkan status \textit{social link}.
+
+Fungsi \textit{payoff} ($Z^{j}$):
+\[
+    Z^{j} =
+    \begin{bmatrix}
+        10-L_{1}^{j} & 0            & \cdots & 0             \\
+        0            & 10-L_{2}^{j} & \ddots & \vdots        \\
+        \vdots       & \ddots       & \ddots & 0             \\
+        0            & \cdots       & 0      & 10-L_{19}^{j}
+    \end{bmatrix}
+    \begin{bmatrix}
+        n_{1}  \\
+        n_{2}  \\
+        \vdots \\
+        n_{19}
+    \end{bmatrix}
+\]
+
+Hasil dari $Z^{j}$ adalah vektor berukuran 19 x 1. Dari vektor $Z^{j}$ tersebut, pilih preferensi berdasarkan nilai terbesar pada komponen vektor tersebut. Apabila terdapat nilai yang sama dalam vektor $Z^{j}$, pilih preferensi berdasarkan banyaknya hari yang dapat digunakan untuk meningkatkan status \textit{social link} suatu karakter selama bermain dari awal hingga akhir permainan. Semakin sedikit hari yang dapat digunakan untuk meningkatkan status \textit{social link} suatu karakter, maka peningkatan status \textit{social link} karakter tersebut semakin diprioritaskan. Prioritas ini diatur dalam bobot atau \textit{weight} yang bertujuan mengatur prioritas \textit{social link}. Dalam simulasi yang dilakukan, terdapat berbagai jalan atau \textit{path} untuk mencapai tujuan akhir, yaitu meningkatkan seluruh status \textit{social link} dengan seluruh karakter.
+
+Keluaran dari fungsi \textit{payoff} $Z^{j}$ adalah karakter apa yang harus ditingkatkan status \textit{social link}-nya pada hari ke-$j$. Namun, terkadang terdapat kasus dimana untuk meningkatkan satu level \textit{social link}, dibutuhkan interaksi lebih dari satu kali. Untuk kasus tersebut, perhatikan bahwa terdapat beberapa faktor yang dapat membantu peningkatan status \textit{social link}, seperti:
+\begin{enumerate}
+    \item Makan bekal yang telah dipersiapkan pada malam hari.
+    \item Berdoa di kuil (\textit{shrine}).
+    \item Berkomunikasi dengan karakter pada malam hari.
+    \item Mendapatkan nilai bagus pada ujian sekolah.
+\end{enumerate}
+
+Perhatikan bahwa melakukan aktivitas diatas tidak dapat meningkatkan level \textit{social link}, namun dapat membuat karakter utama menjadi lebih dekat dengan karakter lain. Selain itu, perhatikan pula bahwa terdapat beberapa karakter yang membutuhkan minimal 11 kali interaksi untuk memaksimalkan status \textit{social link}-nya. Karakter-karakter tersebut adalah: Eri Minami, Sayoko Uehara, dan Naoki Konishi.
+
+Dalam permainan Persona 4 Golden terdapat kasus khusus seperti karakter Tohru Adachi. Pada umumnya, jadwal setiap karakter memiliki pola. Sebagai contoh, jadwal untuk meningkatkan level \textit{social link} Daisuke Nagase adalah pada hari Selasa, Kamis, dan Sabtu (siang). Namun, Tohru Adachi memiliki jadwal yang berbeda karena tidak ada pola mingguan mengenai kapan karakter tersebut dapat ditingkatkan \textit{social link}-nya. Selain itu, pada umumnya level \textit{social link} setiap karakter hanya dapat ditingkatkan pada siang hari atau malam hari saja. Namun untuk karakter Tohru Adachi, karakter tersebut unik karena level \textit{social link} karakter tersebut dapat ditingkatkan pada siang hari dan malam hari, bergantung pada keadaan \textit{social link} antara karakter utama dengan Tohru Adachi pada saat tersebut. Selain itu, karakter Tohru Adachi memiliki jadwal yang tidak menentu. Perhatikan pula bahwa level \textit{social link} yang perlu ditingkatkan untuk karakter Tohru Adachi hanya dari level 1 hingga level 6 karena dari level 7 ke level 10 status \textit{social link}-nya akan berjalan otomatis berdasarkan alur cerita.
