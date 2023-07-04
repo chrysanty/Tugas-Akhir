@@ -1,3 +1,5 @@
-\chapter{Contoh Judul Lampiran}
-\section{Contoh Judul Anak Lampiran}
-Here is my appendix content...
+\includepdf[pages=1,pagecommand={
+            \chapter{Jadwal Peningkatan \textit{Social Link}}
+            \thispagestyle{empty}
+        }, fitpaper=true]{resources/lampiran1.pdf}
+\includepdf[pages=2-]{resources/lampiran2.pdf}

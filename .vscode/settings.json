@@ -6,7 +6,6 @@
       "name": "latex_itb_ta WINDOWS",
       "tools": [
         "latex_itb_make",
-        "latex_itb_del",
       ]
     }
   ],
@@ -25,14 +24,6 @@
         "%DIR_W32%\\thesis.tex"
       ],
       "env": {}
-    },
-    {
-      "name": "latex_itb_del",
-      "command": "del",
-      "args": [
-        "/Q",
-        "%DIR_W32%\\..\\output\\thesis.pdf"
-      ]
     },
   ],
   "latex-workshop.synctex.afterBuild.enabled": true,

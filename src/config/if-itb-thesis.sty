@@ -43,6 +43,9 @@
 \usepackage{afterpage}
 \usepackage{relsize}
 \usepackage{amsmath}
+\usepackage{float}
+\usepackage[final]{pdfpages}
+\usepackage{citeall}
 
 \graphicspath{{resources/}}   % letak direktori penyimpanan gambar
 
@@ -71,14 +74,14 @@
 
     \titlecontents{chapter}
     [0pt]
-    {\bfseries}
+    {}
     {Lampiran \thecontentslabel.\quad}
     {}
     {\textmd{\dotfill}\contentspage}
 
     \titleformat{\chapter}[block]
     {\bfseries}
-    {\chaptertitlename\ \thechapter.\quad}{0pt}
+    {Lampiran\ \thechapter.\quad}{0pt}
     {\bfseries}
 }
 
@@ -102,13 +105,13 @@
 {}
 {Gambar \thecontentslabel.\quad}
 {}
-{\hfill\contentspage}
+{\textmd{\dotfill}\contentspage}
 \titlecontents{table}
 [0pt]
 {}
 {Tabel \thecontentslabel.\quad}
 {}
-{\hfill\contentspage}
+{\textmd{\dotfill}\contentspage}
 
 % Masukin Daftar Pustaka ke toc
 \let\originalprintbibliography\printbibliography
@@ -136,9 +139,19 @@
 
 \makeatother
 
+\setlength{\floatsep}{2\baselineskip}
+\setlength{\belowcaptionskip}{\baselineskip}
+
 % Counter untuk figure dan table.
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
 
 % Define blank page
 \newcommand*{\blankpage}{\afterpage{\null\newpage}}
+
+\def\figureautorefname{Gambar}
+\def\tableautorefname{Tabel}
+
+\hyphenpenalty=500
+\tolerance=1000
+\sloppy
