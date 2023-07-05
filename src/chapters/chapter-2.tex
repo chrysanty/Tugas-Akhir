@@ -4,7 +4,7 @@
 \chapter{Teori Permainan}
 \section{Teori Permainan}
 %bahas game theory
-Menurut \textcite{tadelis2013game}, teori permainan merupakan ilmu yang mempelajari pemodelan matematis untuk masalah dan kerja sama antara agen pengambil keputusan. Pengambil keputusan yang selanjutnya disebut sebagai pemain umumnya memiliki informasi yang berguna untuk proses pengambilan keputusan selanjutnya. Pemain harus mengetahui tiga hal yang mendasari masalah ini, seperti: Apa saja pilihan yang mungkin dilakukan? Apa saja hasil dari setiap pilihan? Bagaimana dampak dari hasil tersebut?
+Teori permainan merupakan ilmu yang mempelajari pemodelan matematis untuk masalah dan kerja sama antara agen pengambil keputusan. Pengambil keputusan yang selanjutnya disebut sebagai pemain umumnya memiliki informasi yang berguna untuk proses pengambilan keputusan selanjutnya. Pemain harus mengetahui tiga hal yang mendasari masalah ini, seperti: Apa saja pilihan yang mungkin dilakukan? Apa saja hasil dari setiap pilihan? Bagaimana dampak dari hasil tersebut?
 
 Pengamatan sederhana diatas memberikan definisi pertama yang penting untuk setiap masalah pengambilan keputusan.
 \begin{definisi}
@@ -20,9 +20,13 @@ Pengamatan sederhana diatas memberikan definisi pertama yang penting untuk setia
     Jika himpunan keluaran X berhingga, maka suatu relasi preferensi rasional X dapat direpresentasikan sebagai fungsi payoff.
 \end{proposisi}
 
-Berikut ini diagram alir yang menyatakan bagaimana pengambilan keputusan diambil.
 \pagebreak
-\begin{figure}
+
+Selain itu, dalam masalah pengambilan keputusan terdapat sifat tidak pasti yang sulit atau tidak dapat distrategikan oleh pemain. Sifat tidak pasti ini disebut sebagai \textbf{sifat alamiah} atau \textbf{\textit{nature}}. Pemain harus dapat membuat strategi dengan mempertimbangkan \textit{nature} permainan.
+
+Berikut ini diagram alir yang menyatakan bagaimana pengambilan keputusan diambil.
+
+\begin{figure}[H]
     \centering
     \input{resources/decision_graphics.tex}
     \caption{Diagram Alir Masalah Pengambilan Keputusan}
@@ -46,7 +50,6 @@ Jika pemain ini menyatakan bahwa ia lebih menyukai es krim rasa vanila dibanding
 Untuk masalah yang serupa, misalkan pemain yang sama harus memilih rasa es krim vanila, stroberi, atau durian. Pemain tersebut tidak mempermasalahkan kondisi ketika ia mendapatkan rasa es krim apapun.
 Namun berdasarkan tingkat kesukaan, pemain tersebut memilih rasa vanila, durian, kemudian stroberi. Misalkan $A = \lbrace v, d, s\rbrace$ adalah himpunan aksi yang dipilih pemain  dan $P = \lbrace V, D, S\rbrace$ adalah himpunan bayaran. Maka relasi preferensi untuk kondisi diatas dapat ditulis sebagai $V \succsim D$ dan $D \succsim S$, sehingga $V \succsim S$. Artinya, relasi preferensi untuk masalah ini dikatakan bersifat transitif.
 
-Dalam masalah pengambilan keputusan terdapat sifat tidak pasti yang sulit atau tidak dapat distrategikan oleh pemain. Sifat tidak pasti ini disebut sebagai \textbf{sifat alamiah} atau \textbf{\textit{nature}}. Pemain harus dapat membuat strategi dengan mempertimbangkan \textit{nature} permainan.
 
 \section{Teori Permainan Berdasarkan Kelengkapan Infomasi}
 Dalam memainkan suatu permainan, informasi menjadi hal yang penting untuk diketahui pemain. Informasi permainan membantu pemain untuk mendapatkan gambaran permainan, batasan permainan, serta aturan-aturan yang harus diikuti dalam permainan tersebut. Dengan memahami informasi permainan dengan baik, pemain dapat mengoptimalkan strategi permainan dan meminimalisir terjadinya kesalahan yang dapat merugikan pemain. Namun, informasi dalam permainan terkadang tidak sepenuhnya diberikan. Misalnya,informasi yang diberikan permainan bukanlah \textbf{pengetahuan umum}.
@@ -70,7 +73,7 @@ Salah satu permainan dengan informasi lengkap adalah catur. Permainan catur adal
     \begin{enumerate}
         \item Seluruh kemungkinan aksi yang dilakukan seluruh pemain.
         \item Seluruh kemungkinan keluaran.
-        \item Bagaimana setiap kombinasi aksi pemain mempengaruhi keluaran.
+        \item Bagaimana setiap kombinasi aksi pemain memengaruhi keluaran.
         \item Preferensi setiap dan seluruh pemain terhadap keluaran.
     \end{enumerate}
 \end{definisi}
@@ -141,6 +144,7 @@ Permainan ekstensif dapat digambarkan dalam bentuk \textbf{pohon permainan}. Poh
     Permainan ekstensif disebut sebagai permainan yang memiliki informasi sempurna apabila tidak ada unsur \textbf{nature}, atau ketika seluruh pemain tahu lokasi \textbf{node} pemain berada ketika bermain.
 \end{definisi}
 
+\pagebreak
 Dalam permainan dinamis, terdapat permainan multitahap yang merupakan jenis permainan lengkap dan tidak sempurna. Permainan multitahap bersifat dinamis karena aksi yang dilakukan kedepannya dapat dipengaruhi oleh aksi yang dilakukan sebelumnya. Permainan \textbf{Persona 4 Golden} adalah contoh permainan multitahap.
 
 %PR 26/04/23
